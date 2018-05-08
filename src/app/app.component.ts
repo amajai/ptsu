@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  step = 0;
+
+  next(): void {
+      this.step++;
+  }
 }
