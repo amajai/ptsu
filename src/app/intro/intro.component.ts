@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EN_INTRO_DIALOGUE } from './en-intro-dialogue';
 
 @Component({
 	selector: 'app-intro',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./intro.component.css']
 })
 export class IntroComponent implements OnInit {
-	constructor() {}
+	dialogue = EN_INTRO_DIALOGUE;
+
+	constructor() {
+		console.log(this.dialogue);
+	}
 
 	ngOnInit() {}
 }
