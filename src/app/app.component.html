@@ -1,4 +1,25 @@
 <div style="text-align:center" [ngSwitch]="step">
-    <app-welcome *ngSwitchCase="0" (next)="next()"></app-welcome>
-    <app-intro *ngSwitchCase="1" (next)="next()"></app-intro>
+    <app-welcome
+        *ngSwitchCase="0"
+        (next)="next()"
+    ></app-welcome>
+
+    <app-intro
+        *ngSwitchCase="1"
+        (next)="next()"
+    ></app-intro>
+
+    <app-phrase-entry
+        *ngSwitchCase="2"
+        (next)="next()"
+        [phraseType]="'brand name'"
+        (onPhrase)="onNewPhrase($event)"
+    ></app-phrase-entry>
+
+    <app-phrase-send
+        *ngSwitchCase="3"
+        (next)="next()"
+        [phrase]="phrase"
+    ></app-phrase-send>
+
 </div>

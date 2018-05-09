@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { EN_INTRO_DIALOGUE } from './en-intro-dialogue';
 
 @Component({
@@ -7,11 +7,15 @@ import { EN_INTRO_DIALOGUE } from './en-intro-dialogue';
 	styleUrls: ['./intro.component.css']
 })
 export class IntroComponent implements OnInit {
+	@Output() next: EventEmitter<any> = new EventEmitter();
+
 	dialogue = EN_INTRO_DIALOGUE;
 
-	constructor() {
-		console.log(this.dialogue);
-	}
+	constructor() {}
 
 	ngOnInit() {}
+
+	onDone() {
+		this.next.emit(null);
+	}
 }

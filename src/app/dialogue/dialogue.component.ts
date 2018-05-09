@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 	styleUrls: ['./dialogue.component.css']
 })
 export class DialogueComponent implements OnInit {
-	@Output() next: EventEmitter<any> = new EventEmitter();
+	@Output() done: EventEmitter<any> = new EventEmitter();
 
 	@Input() prompts: string[];
 
@@ -17,9 +17,9 @@ export class DialogueComponent implements OnInit {
 	ngOnInit() {}
 
 	nextPrompt() {
-		if (this.currentIndex >= this.prompts.length) {
-			this.next.emit(null);
-		}
 		this.currentIndex++;
+		if (this.currentIndex >= this.prompts.length) {
+			this.done.emit(null);
+		}
 	}
 }

@@ -8,8 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
 	title = 'app';
 	step = 0;
+	phrase: string;
 
 	next(): void {
 		this.step++;
+	}
+
+	onNewPhrase(phrase: string) {
+		this.phrase = phrase;
 	}
 }
