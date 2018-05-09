@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { getList } from './get-list';
+import { EN_CURVED_BRANDS, EN_STRAIGHT_BRANDS } from './en-brands';
 
 @Component({
 	selector: 'app-phrase-guess',
@@ -6,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./phrase-guess.component.css']
 })
 export class PhraseGuessComponent implements OnInit {
+	@Input() phrase: string;
+
+	phraseList: string[];
+
 	constructor() {}
 
-	ngOnInit() {}
+	ngOnInit() {
+		this.phraseList = getList(
+			this.phrase,
+			EN_CURVED_BRANDS,
+			EN_STRAIGHT_BRANDS
+		);
+	}
 }

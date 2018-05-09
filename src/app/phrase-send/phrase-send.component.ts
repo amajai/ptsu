@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
 	selector: 'app-phrase-send',
@@ -6,6 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
 	styleUrls: ['./phrase-send.component.css']
 })
 export class PhraseSendComponent implements OnInit {
+	@Output() next: EventEmitter<any> = new EventEmitter();
 	@Input() phrase: string;
 
 	step = 0;
@@ -22,5 +23,9 @@ export class PhraseSendComponent implements OnInit {
 
 	onPhraseSent() {
 		this.step = 2;
+	}
+
+	onContinue() {
+		this.next.emit(null);
 	}
 }
