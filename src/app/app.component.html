@@ -22,4 +22,10 @@
         [phrase]="phrase"
     ></app-phrase-send>
 
+    <app-phrase-guess
+        *ngSwitchCase="4"
+        (next)="next()"
+        [phrase]="phrase"
+    ></app-phrase-send>
+
 </div>
