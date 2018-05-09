@@ -7,7 +7,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PhraseSendComponent implements OnInit {
 	@Input() phrase: string;
+
+	step = 0;
 	constructor() {}
 
 	ngOnInit() {}
+
+	sendPhrase() {
+		this.step = 1;
+		setTimeout(() => {
+			this.onPhraseSent();
+		}, 3000);
+	}
+
+	onPhraseSent() {
+		this.step = 2;
+	}
 }

@@ -1,3 +1,19 @@
-<p>
-  {{phrase}}
-</p>
+<div [ngSwitch]="step">
+    <div *ngSwitchCase="0">
+        <p>
+          Your data has been sent to the PTSU, and is ready to be transmitted to the
+          brain of the owner of this device. Make sure that there is no way for the
+          subject to know what you have entered before you send.
+        </p>
+        <h3>{{phrase}}</h3>
+        <button (click)="sendPhrase()">Send</button>
+    </div>
+    <div *ngSwitchCase="1">
+        <h3>Sending...</h3>
+        <h2>{{phrase}}</h2>
+    </div>
+    <div *ngSwitchCase="2">
+        <h2>Done!</h2>
+        <button>Continue</button>
+    </div>
+</div>
