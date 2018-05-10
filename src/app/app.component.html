@@ -24,8 +24,9 @@
 
     <app-phrase-guess
         *ngSwitchCase="4"
-        (next)="next()"
-        [phrase]="phrase"
+        (next)="step = 2"
+        [enteredPhrase]="phrase"
+        [phraseType]="'brand name'"
     ></app-phrase-guess>
 
 </div>

@@ -1,5 +1,14 @@
-<ul>
-    <li *ngFor="let phrase of phraseList">
-        {{phrase}}
-    </li>
-</ul>
+<p>
+    Now, read all of these {{phraseType}}s out loud in any order. Your
+    friend should feel an urge when you read the one you entered earlier.
+    You can read them in any order. The psychoelectric waves sent by the
+    PTSU are sensitive, so to ensure effective results, make sure to only
+    read the {{phraseType}}s from this list.
+</p>
+<div>
+    <app-phrase-item
+        *ngFor="let phrase of phraseList"
+        [phrase]="phrase"
+    ></app-phrase-item>
+    <button (click)="restart()">Try another {{phraseType}}</button>
+</div>

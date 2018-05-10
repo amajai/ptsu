@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { getList } from './get-list';
 import { EN_CURVED_BRANDS, EN_STRAIGHT_BRANDS } from './en-brands';
 
@@ -8,7 +8,9 @@ import { EN_CURVED_BRANDS, EN_STRAIGHT_BRANDS } from './en-brands';
 	styleUrls: ['./phrase-guess.component.css']
 })
 export class PhraseGuessComponent implements OnInit {
-	@Input() phrase: string;
+	@Output() next: EventEmitter<any> = new EventEmitter();
+	@Input() phraseType: string;
+	@Input() enteredPhrase: string;
 
 	phraseList: string[];
 
@@ -16,9 +18,13 @@ export class PhraseGuessComponent implements OnInit {
 
 	ngOnInit() {
 		this.phraseList = getList(
-			this.phrase,
+			this.enteredPhrase,
 			EN_CURVED_BRANDS,
 			EN_STRAIGHT_BRANDS
 		);
+	}
+
+	restart() {
+		this.next.emit(null);
 	}
 }

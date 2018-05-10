@@ -9,6 +9,7 @@ import { DialogueComponent } from './dialogue/dialogue.component';
 import { PhraseEntryComponent } from './phrase-entry/phrase-entry.component';
 import { PhraseSendComponent } from './phrase-send/phrase-send.component';
 import { PhraseGuessComponent } from './phrase-guess/phrase-guess.component';
+import { PhraseItemComponent } from './phrase-item/phrase-item.component';
 
 @NgModule({
 	declarations: [
@@ -18,7 +19,8 @@ import { PhraseGuessComponent } from './phrase-guess/phrase-guess.component';
 		DialogueComponent,
 		PhraseEntryComponent,
 		PhraseSendComponent,
-		PhraseGuessComponent
+		PhraseGuessComponent,
+		PhraseItemComponent
 	],
 	imports: [BrowserModule, FormsModule],
 	providers: [],
