@@ -1,6 +1,5 @@
-div {
-	border-radius: 8px;
-	background: MediumSlateBlue;
-	padding: 4px;
-	color: white;
+.phrase {
+	margin: 2px;
+	text-align: center;
+	padding: 0.3rem;
 }

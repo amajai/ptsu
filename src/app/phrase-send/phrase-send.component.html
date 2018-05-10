@@ -5,15 +5,22 @@
           brain of the owner of this device. Make sure that there is no way for the
           subject to know what you have entered before you send.
         </p>
-        <h3>{{phrase}}</h3>
-        <button (click)="sendPhrase()">Send</button>
+        <div class="center">
+            <h3>{{phrase}}</h3>
+            <button type="button" class="btn btn-info" (click)="sendPhrase()">Send</button>
+        </div>
     </div>
     <div *ngSwitchCase="1">
-        <h3>Sending...</h3>
-        <h2>{{phrase}}</h2>
+        <div class="center">
+            <h3>Sending...</h3>
+            <app-send-animation></app-send-animation>
+            <h2>{{phrase}}</h2>
+        </div>
     </div>
     <div *ngSwitchCase="2">
-        <h2>Done!</h2>
-        <button (click)="onContinue()">Continue</button>
+        <div class="center">
+            <h2 class="mb-3">Done!</h2>
+            <button type="button" class="btn btn-info" (click)="onContinue()">Continue</button>
+        </div>
     </div>
 </div>

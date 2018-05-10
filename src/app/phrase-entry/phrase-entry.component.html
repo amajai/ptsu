@@ -4,5 +4,11 @@
     it has been calibrated to their mind only.
 </p>
 <label>Enter a {{phraseType}} to send: </label>
-<input [(ngModel)]="phrase">
-<button (click)="submit()">Submit</button>
+<div class="input-group mb-3">
+  <input
+    type="text"
+    class="form-control"
+    (keyup.enter)="submit()"
+    [(ngModel)]="phrase">
+</div>
+<button type="button" class="btn btn-info" (click)="submit()">Submit</button>
