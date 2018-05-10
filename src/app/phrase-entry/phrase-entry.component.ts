@@ -18,6 +18,11 @@ export class PhraseEntryComponent implements OnInit {
 	ngOnInit() {}
 
 	submit() {
+		if (!this.phrase) {
+			alert('Enter a valid brand name');
+			return;
+		}
+
 		this.phrase = this.phrase.trim();
 
 		// starts with a letter
