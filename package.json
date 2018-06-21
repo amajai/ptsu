@@ -10,7 +10,7 @@
 		"e2e": "ng e2e",
 		"precommit": "pretty-quick --staged",
 		"deploy":
-			"ng build --prod --base-href \"http://www.tannerkrewson.com/ptsu/\" && ngh --dir=\"dist\\ptsu\""
+			"ng build --prod --base-href \"https://www.tannerkrewson.com/ptsu/\" && ngh --dir=\"dist\\ptsu\""
 	},
 	"private": true,
 	"dependencies": {
