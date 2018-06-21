@@ -42,7 +42,7 @@ export const EN_STRAIGHT_BRANDS: string[] = [
 	'Adidas',
 	'Aeropostale',
 	'Amazon',
-	'Amerian Eagle',
+	'American Eagle',
 	'Android',
 	'Apple',
 	'Aquafina',
