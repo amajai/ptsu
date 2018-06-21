@@ -2,8 +2,11 @@
 body {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
-	background-color: #739bff;
+	background-image: linear-gradient(135deg, #434343 0%, black 100%);
 	font-size: 1.25rem;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: white;
 }
 
 h1,
