@@ -1,0 +1,12 @@
+.ptsu-box {
+	width: 512px;
+	border: 2px solid white;
+	padding: 12px;
+	margin-top: auto;
+}
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60vh;
+}

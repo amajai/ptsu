@@ -1,32 +1,33 @@
-<div class="container" [ngSwitch]="step">
-    <app-welcome
-        *ngSwitchCase="0"
-        (next)="next()"
-    ></app-welcome>
+<div class="container">
+    <div class="ptsu-box" [ngSwitch]="step">
+        <app-welcome
+            *ngSwitchCase="0"
+            (next)="next()"
+        ></app-welcome>
 
-    <app-intro
-        *ngSwitchCase="1"
-        (next)="next()"
-    ></app-intro>
+        <app-intro
+            *ngSwitchCase="1"
+            (next)="next()"
+        ></app-intro>
 
-    <app-phrase-entry
-        *ngSwitchCase="2"
-        (next)="next()"
-        [phraseType]="'brand name'"
-        (onPhrase)="onNewPhrase($event)"
-    ></app-phrase-entry>
+        <app-phrase-entry
+            *ngSwitchCase="2"
+            (next)="next()"
+            [phraseType]="'brand name'"
+            (onPhrase)="onNewPhrase($event)"
+        ></app-phrase-entry>
 
-    <app-phrase-send
-        *ngSwitchCase="3"
-        (next)="next()"
-        [phrase]="phrase"
-    ></app-phrase-send>
+        <app-phrase-send
+            *ngSwitchCase="3"
+            (next)="next()"
+            [phrase]="phrase"
+        ></app-phrase-send>
 
-    <app-phrase-guess
-        *ngSwitchCase="4"
-        (next)="step = 2"
-        [enteredPhrase]="phrase"
-        [phraseType]="'brand name'"
-    ></app-phrase-guess>
-
+        <app-phrase-guess
+            *ngSwitchCase="4"
+            (next)="step = 2"
+            [enteredPhrase]="phrase"
+            [phraseType]="'brand name'"
+        ></app-phrase-guess>
+    </div>
 </div>
