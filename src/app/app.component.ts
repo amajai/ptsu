@@ -14,6 +14,10 @@ export class AppComponent {
 		this.step++;
 	}
 
+	back(): void {
+		this.step--;
+	}
+
 	onNewPhrase(phrase: string) {
 		this.phrase = phrase;
 	}

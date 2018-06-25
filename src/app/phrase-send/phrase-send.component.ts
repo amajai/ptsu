@@ -7,6 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class PhraseSendComponent implements OnInit {
 	@Output() next: EventEmitter<any> = new EventEmitter();
+	@Output() back: EventEmitter<any> = new EventEmitter();
 	@Input() phrase: string;
 
 	step = 0;
@@ -27,5 +28,9 @@ export class PhraseSendComponent implements OnInit {
 
 	onContinue() {
 		this.next.emit(null);
+	}
+
+	onBack() {
+		this.back.emit(null);
 	}
 }

@@ -5,7 +5,7 @@
     PTSU are sensitive, so to ensure effective results, make sure to only
     read the {{phraseType}}s from this list.
 </p>
-<div class="center">
+<div class="text-center">
     <ul class="list-group">
         <app-phrase-item
             *ngFor="let phrase of phraseList"
@@ -15,6 +15,6 @@
 </div>
 <br>
 
-<div class="center">
-    <button type="button" class="btn btn-light" (click)="restart()">Try another {{phraseType}}</button>
+<div class="text-center">
+    <button type="button" class="btn btn-outline-light" (click)="restart()">Try another {{phraseType}}</button>
 </div>
