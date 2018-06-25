@@ -33,4 +33,8 @@ export class PhraseEntryComponent implements OnInit {
 			alert('Enter a valid brand name');
 		}
 	}
+
+	onBack() {
+		location.reload();
+	}
 }
