@@ -1,3 +1,5 @@
+declare let gtag: any;
+
 export function getList(
 	phrase: string,
 	curvedPhrases: string[],
@@ -7,6 +9,10 @@ export function getList(
 	let isCurved: boolean = CURVED.includes(firstLetter);
 	let isStraight: boolean = STRAIGHT.includes(firstLetter);
 
+	gtag('event', 'generate_list', {
+		event_label: 'sent_word_' + (isCurved ? 'curved' : 'straight')
+	});
+
 	// if the first letter is curved, the rest of the words should be straight,
 	// and vice versa
 	if (isCurved) {
@@ -14,7 +20,7 @@ export function getList(
 	} else if (isStraight) {
 		return generateList(phrase, curvedPhrases);
 	} else {
-		alert(1);
+		alert('You have entered an invalid brand.');
 		window.location.reload();
 	}
 }
