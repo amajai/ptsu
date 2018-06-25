@@ -6,12 +6,13 @@
     read the {{phraseType}}s from this list.
 </p>
 <div class="text-center">
-    <ul class="list-group">
+    <div class="phrase-list">
         <app-phrase-item
             *ngFor="let phrase of phraseList"
             [phrase]="phrase"
+            class="phrase-item"
         ></app-phrase-item>
-    </ul>
+    </div>
 </div>
 <br>
 

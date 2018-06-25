@@ -1,3 +1,9 @@
-ul {
-	display: inline-block;
+.phrase-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 2em 2em 0.5em;
+}
+
+.phrase-item {
+	flex-grow: 1;
 }
