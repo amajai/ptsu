@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="ptsu-box" [ngSwitch]="step">
+        <app-welcome
+            *ngSwitchCase="0"
+            (next)="next()"
+        ></app-welcome>
+
+        <app-intro
+            *ngSwitchCase="1"
+            (next)="next()"
+        ></app-intro>
+
+        <app-phrase-entry
+            *ngSwitchCase="2"
+            (next)="next()"
+            [phraseType]="'brand name'"
+            (onPhrase)="onNewPhrase($event)"
+        ></app-phrase-entry>
+
+        <app-phrase-send
+            *ngSwitchCase="3"
+            (next)="next()"
+            (back)="back()"
+            [phrase]="phrase"
+        ></app-phrase-send>
+
+        <app-phrase-guess
+            *ngSwitchCase="4"
+            (next)="step = 2"
+            [enteredPhrase]="phrase"
+            [phraseType]="'brand name'"
+        ></app-phrase-guess>
+    </div>
+</div>
+<br>
+<footer *ngIf="step > 0">
+    PTSU Exposed by Tanner Krewson
+    <br>
+    www.tannerkrewson.com
+</footer>
