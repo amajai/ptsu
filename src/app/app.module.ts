@@ -11,6 +11,7 @@ import { PhraseSendComponent } from './phrase-send/phrase-send.component';
 import { PhraseGuessComponent } from './phrase-guess/phrase-guess.component';
 import { PhraseItemComponent } from './phrase-item/phrase-item.component';
 import { SendAnimationComponent } from './send-animation/send-animation.component';
+import { TypedTextComponent } from './typed-text/typed-text.component';
 
 @NgModule({
 	declarations: [
@@ -22,7 +23,8 @@ import { SendAnimationComponent } from './send-animation/send-animation.componen
 		PhraseSendComponent,
 		PhraseGuessComponent,
 		PhraseItemComponent,
-		SendAnimationComponent
+		SendAnimationComponent,
+		TypedTextComponent
 	],
 	imports: [BrowserModule, FormsModule],
 	providers: [],
