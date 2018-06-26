@@ -6,21 +6,27 @@
           subject to know what you have entered before you transmit.
         </p>
         <div class="text-center">
-            <h2 class="mt-5 mb-5">{{phrase}}</h2>
+            <h2 class="mt-5 mb-5">
+                <app-typed-text [typeText]="phrase" [speed]="128"></app-typed-text>
+            </h2>
             <button type="button" class="btn btn-outline-light" (click)="onBack()">Back</button>
             <button type="button" class="btn btn-outline-light" (click)="sendPhrase()">Transmit</button>
         </div>
     </div>
     <div *ngSwitchCase="1">
         <div class="text-center">
-            <h3 class="mt-2 mb-5">Sending...</h3>
+            <h3 class="mt-2 mb-5">
+                <app-typed-text [typeText]="'Sending...'" [speed]="128"></app-typed-text>
+            </h3>
             <app-send-animation></app-send-animation>
-            <h2 class="mt-4 mb-4">{{phrase}}</h2>
+            <h2 class="mt-4 mb-4">{{ phrase }}</h2>
         </div>
     </div>
     <div *ngSwitchCase="2">
         <div class="text-center mt-2 mb-2">
-            <h2 class="mb-3">Done!</h2>
+            <h2 class="mb-3">
+                <app-typed-text [typeText]="'Done!'" [speed]="50"></app-typed-text>
+            </h2>
             <button type="button" class="btn btn-outline-light" (click)="onContinue()">Continue</button>
         </div>
     </div>

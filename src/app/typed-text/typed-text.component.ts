@@ -8,10 +8,12 @@ import Typed from 'typed.js';
 	styleUrls: ['./typed-text.component.css']
 })
 export class TypedTextComponent implements OnInit {
+	@Input() speed: number;
+	@Input() delay: number;
+
 	typed: any;
 
 	constructor() {}
-
 	ngOnInit() {}
 
 	@Input()
@@ -20,8 +22,18 @@ export class TypedTextComponent implements OnInit {
 			this.typed.destroy();
 		}
 
-		this.typed = new Typed('#typed-text', {
+		var options: any = {
 			strings: [text]
-		});
+		};
+
+		if (this.speed) {
+			options.typeSpeed = this.speed;
+		}
+
+		if (this.delay) {
+			options.startDelay = this.delay;
+		}
+
+		this.typed = new Typed('#typed-text', options);
 	}
 }
