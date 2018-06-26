@@ -1,6 +1,6 @@
 # PTSU Exposed
 
-Tech giants like Google, Apple, Facebook, Microsoft, and Amazon have been secretly installing microchips in smartphones since 2012 that send psychoelectric waves into the minds of their users, allowing the highest bidding advertisers to influence consumers' brand preferences. Discover the biggest conspiracy in the history of mankind with PTSU Exposed. 
+Tech giants like Google, Apple, Facebook, Microsoft, and Amazon have been secretly installing a microchip called the Psychoelectric Telepathic Suggestion Unit, or PTSU, in smartphones since 2012 that send psychoelectric waves into the minds of their users, allowing the highest bidding advertisers to influence consumers' brand preferences. Discover the biggest conspiracy in the history of mankind with PTSU Exposed. 
 
 (If you're confused, [click here](https://www.tannerkrewson.com/ptsu/secret).)
 
