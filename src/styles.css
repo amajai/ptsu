@@ -34,3 +34,7 @@ h5 {
 .fixed-box-height {
 	height: 40vh;
 }
+
+.sans-serif {
+	font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
