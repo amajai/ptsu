@@ -1,8 +1,10 @@
 # PTSU Exposed
 
+**Try it out: www.tannerkrewson.com/ptsu**
+
 Tech giants Google and Apple have been secretly installing a microchip in all iPhones and Androids called the Psychoelectric Telepathic Suggestion Unit, or PTSU, that send psychoelectric waves into the minds of their users, allowing the highest bidding advertisers to influence consumers' brand preferences. Discover the biggest conspiracy in the history of mankind with PTSU Exposed. 
 
-(If you're confused, [click here](https://www.tannerkrewson.com/ptsu/secret).)
+(If you're confused: www.tannerkrewson.com/ptsu/secret)
 
 ## Development
 
