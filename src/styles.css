@@ -38,3 +38,18 @@ h5 {
 .sans-serif {
 	font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
+
+.ptsu-box {
+	width: 512px;
+	border: 2px solid white;
+	padding: 12px;
+}
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+footer {
+	text-align: center;
+	font-size: 75%;
+}

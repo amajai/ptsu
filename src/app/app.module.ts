@@ -14,8 +14,12 @@ import { PhraseItemComponent } from './phrase-item/phrase-item.component';
 import { SendAnimationComponent } from './send-animation/send-animation.component';
 import { TypedTextComponent } from './typed-text/typed-text.component';
 import { PtsuMainComponent } from './ptsu-main/ptsu-main.component';
+import { PtsuSecretComponent } from './ptsu-secret/ptsu-secret.component';
 
-const routes: Routes = [{ path: '', component: PtsuMainComponent }];
+const routes: Routes = [
+	{ path: '', component: PtsuMainComponent },
+	{ path: 'secret', component: PtsuSecretComponent }
+];
 
 @NgModule({
 	declarations: [
@@ -29,7 +33,8 @@ const routes: Routes = [{ path: '', component: PtsuMainComponent }];
 		PhraseItemComponent,
 		SendAnimationComponent,
 		TypedTextComponent,
-		PtsuMainComponent
+		PtsuMainComponent,
+		PtsuSecretComponent
 	],
 	imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
 	providers: [],
